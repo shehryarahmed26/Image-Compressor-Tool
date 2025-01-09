@@ -8,7 +8,7 @@ const cloudinary = require('cloudinary').v2;
 
 const app = express()
 // server listen
-app.listen(process.env.Port, () => console.log('Server is Start on Port', process.env.Port))
+app.listen(process.env.Port || 3000, () => console.log('Server is Start on Port', process.env.Port))
 
 // middleware 
 app.use(express.json())
