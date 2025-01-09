@@ -64,7 +64,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
         // cloudniay upload setup
 
-        cloudinary.uploader.upload(`compress/${filename}`)
+        cloudinary.uploader.upload(compressfilepath)
         .then((result) => {
             // remove the files sor optimize the server in future
             // fs.unlinkSync(uploadfilepath)
